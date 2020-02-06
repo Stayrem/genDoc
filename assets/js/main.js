@@ -442,13 +442,31 @@ $(function() {
       minute: 30,
     });
 
-        
+    var updateContructorEventListeners = function() {
+        $('.constructor__btn button').on('click', function(evt){
+            evt.preventDefault();
+            var $parentStep = $(this).closest('.constructor__step.active');
+            $parentStep.animate({
+                opacity : 0
+            }, 500, function() {
+                var $nextStep = $parentStep.next();
+                $parentStep.addClass('hidden');
+                $nextStep.removeClass('hidden');
+                $parentStep.removeClass('active');
+                $nextStep.animate({
+                    opacity : 1
+                }, 500, function(){
+                    $nextStep.addClass('active');
+                })
+            })
+        });
+    }
     
     
 
     //===== Scroll It active
 
-    $.scrollIt({
+   /* $.scrollIt({
         upKey: 38, // key code to navigate to the next section
         downKey: 40, // key code to navigate to the previous section
         easing: 'linear', // the easing function for animation
@@ -456,10 +474,47 @@ $(function() {
         activeClass: 'active', // class given to the active nav element
         onPageChange: null, // function(pageIndex) that is called when page is changed
         topOffset: -70, // offste (in px) for fixed top navigation
-    });
+    });*/
 
     
+   
+    var renderContent = function (contsiner, template, place){
+        if(place === undefined) {
+            place = 'beforeend'
+        }
+        contsiner.innerHTML = '';
+        contsiner.insertAdjacentHTML(place, template);
+      };
     
-    
+    var formTypeListener = function() {
+        var renderContainer = document.querySelector('.constructor__form');
+        var $formTypeSelect = $('#form__select');
+        $formTypeSelect.change(function(evt){
+            var formType = $(this).val();
+            console.log(formType)
+            switch(formType){
+                case 'form__person':
+                    renderContent(renderContainer, window.personform);
+                    $('select').niceSelect();
+                    updateContructorEventListeners();
+                    break;
+                case 'form__comp':
+                    renderContent(renderContainer, window.compForm);
+                    $('select').niceSelect();
+                    updateContructorEventListeners();
+                    break;
+                case 'form__enterpreneur':
+                    renderContent(renderContainer, window.enterpreneurForm);
+                    $('select').niceSelect();
+                    updateContructorEventListeners();
+                    break;
+                default:
+                    break;
+            }
+        })
+    }();
     
 });
+
+
+
