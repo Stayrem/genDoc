@@ -1,8 +1,8 @@
 const createPersonForm = () => 
-    `                            <div class="constructor__step active">
+    `                            <div>
     <div class="container">
    
-        <div class="row mb-45">
+        <div class="row doc-data">
             <div class="input-box constructor__input col-md-4 mt-45">
                 <label for="form__city">Ваш Город</label>
                 <input id="form__city" type="text"  placeholder="Ваш Город*">
@@ -18,7 +18,7 @@ const createPersonForm = () =>
         </div>
         <div class="row">
         <div class="col">
-            <span class="font-weight-bold constructor__subtitle ">
+            <span class="font-weight-bold constructor__subtitle mt-45">
                 Заполните данные доверителя
             </span>
         </div>
@@ -85,82 +85,10 @@ const createPersonForm = () =>
         </div>
     </div>
 </div>
-<div class="constructor__step hidden">
-<div class="container">
-<div class="row">
-        <div class="col">
-            <span class="font-weight-bold constructor__subtitle mt-45">
-                Заполните данные доверенного лица
-            </span>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="input-box constructor__input col-md-12 mt-25">
-            <label for="form__name">ФИО</label>
-            <input type="text" id="form__name" name="name" placeholder="ФИО*">
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="select-box constructor__input col-md-6 mt-25">
-            <label for="form__sex">Пол</label>
-            <select name="" id="form__sex">
-                <option value="">Не выбрано</option>
-                <option value="">Мужской</option>
-                <option value="">Женский</option>
-            </select>
-        </div>
-        <div class="input-box constructor__input col-md-6 mt-25">
-            <label for="form__birth">Дата Рождения</label>
-            <input id="form__birth" type="text" placeholder="Дата Рождения*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="select-box constructor__input col-md-4 mt-25">
-            <label for="form__document">Документ</label>
-            <select name="" id="form__document">
-                <option value="">Не выбрано</option>
-                <option value="">Паспорт</option>
-            </select>                                        </div>
-        <div class="input-box constructor__input col-md-4 mt-25">
-            <label for="form__doc-serial">Серия</label>
-            <input type="text" id="form__doc-serial" maxlength="10" placeholder="Серия*">
-        </div>
-        <div class="input-box constructor__input col-md-4 mt-25">
-            <label for="form__doc-numb">Номер</label>
-            <input type="text" id="form__doc-numb" maxlength="4" placeholder="Номер*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-box constructor__input col-md-12 mt-25">
-            <label for="form__date-issue">Дата выдачи и кем выдан</label>
-            <input type="text" placeholder="Дата выдачи и кем выдан*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-box constructor__input col-md-5 mt-25">
-            <label for="form__code">Код Подразделения</label>
-            <input type="text" id="form_code" placeholder="Код Подразделения*">
-        </div>
-        <div class="input-box constructor__input col-md-7 mt-25">
-            <label for="form__address">Адрес Регистрации</label>
-            <input type="text"id="form__address" placeholder="Адрес Регистрации*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="constructor__btn d-flex">
-                <button class="main-btn mx-auto mt-25" >Далее</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>`;
-;
+`;
 
 const createCompForm = () =>
-`<div class="constructor__step active">
+`<div>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -223,86 +151,16 @@ const createCompForm = () =>
     </div>
 </div>
 </div>
-<div class="constructor__step hidden">
-<div class="container">
-<div class="row">
-        <div class="col">
-            <span class="font-weight-bold constructor__subtitle mt-45">
-                Заполните данные доверенного лица
-            </span>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="input-box constructor__input col-md-12 mt-25">
-            <label for="form__name">ФИО</label>
-            <input type="text" id="form__name" name="name" placeholder="ФИО*">
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="select-box constructor__input col-md-6 mt-25">
-            <label for="form__sex">Пол</label>
-            <select name="" id="form__sex">
-                <option value="">Не выбрано</option>
-                <option value="">Мужской</option>
-                <option value="">Женский</option>
-            </select>
-        </div>
-        <div class="input-box constructor__input col-md-6 mt-25">
-            <label for="form__birth">Дата Рождения</label>
-            <input id="form__birth" type="text" placeholder="Дата Рождения*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="select-box constructor__input col-md-4 mt-25">
-            <label for="form__document">Документ</label>
-            <select name="" id="form__document">
-                <option value="">Не выбрано</option>
-                <option value="">Паспорт</option>
-            </select>                                        </div>
-        <div class="input-box constructor__input col-md-4 mt-25">
-            <label for="form__doc-serial">Серия</label>
-            <input type="text" id="form__doc-serial" maxlength="10" placeholder="Серия*">
-        </div>
-        <div class="input-box constructor__input col-md-4 mt-25">
-            <label for="form__doc-numb">Номер</label>
-            <input type="text" id="form__doc-numb" maxlength="4" placeholder="Номер*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-box constructor__input col-md-12 mt-25">
-            <label for="form__date-issue">Дата выдачи и кем выдан</label>
-            <input type="text" placeholder="Дата выдачи и кем выдан*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-box constructor__input col-md-5 mt-25">
-            <label for="form__code">Код Подразделения</label>
-            <input type="text" id="form_code" placeholder="Код Подразделения*">
-        </div>
-        <div class="input-box constructor__input col-md-7 mt-25">
-            <label for="form__address">Адрес Регистрации</label>
-            <input type="text"id="form__address" placeholder="Адрес Регистрации*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="constructor__btn d-flex">
-                <button class="main-btn mx-auto mt-25" >Далее</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>`;
+
+`;
 
 const createEnterpreneurForm = () =>
-`<div class="constructor__step active">
+`<div>
 <div class="container">
     <div class="row">
         <div class="col">
             <span class="font-weight-bold constructor__subtitle mt-45">
-                Заполнить данные доверителя
+                Заполните данные доверителя
             </span>
         </div>
     </div>
@@ -341,79 +199,9 @@ const createEnterpreneurForm = () =>
     </div>
 </div>
 </div>
-<div class="constructor__step hidden">
-<div class="container">
-<div class="row">
-        <div class="col">
-            <span class="font-weight-bold constructor__subtitle mt-45">
-                Заполните данные доверенного лица
-            </span>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="input-box constructor__input col-md-12 mt-25">
-            <label for="form__name">ФИО</label>
-            <input type="text" id="form__name" name="name" placeholder="ФИО*">
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="select-box constructor__input col-md-6 mt-25">
-            <label for="form__sex">Пол</label>
-            <select name="" id="form__sex">
-                <option value="">Не выбрано</option>
-                <option value="">Мужской</option>
-                <option value="">Женский</option>
-            </select>
-        </div>
-        <div class="input-box constructor__input col-md-6 mt-25">
-            <label for="form__birth">Дата Рождения</label>
-            <input id="form__birth" type="text" placeholder="Дата Рождения*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="select-box constructor__input col-md-4 mt-25">
-            <label for="form__document">Документ</label>
-            <select name="" id="form__document">
-                <option value="">Не выбрано</option>
-                <option value="">Паспорт</option>
-            </select>                                        </div>
-        <div class="input-box constructor__input col-md-4 mt-25">
-            <label for="form__doc-serial">Серия</label>
-            <input type="text" id="form__doc-serial" maxlength="10" placeholder="Серия*">
-        </div>
-        <div class="input-box constructor__input col-md-4 mt-25">
-            <label for="form__doc-numb">Номер</label>
-            <input type="text" id="form__doc-numb" maxlength="4" placeholder="Номер*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-box constructor__input col-md-12 mt-25">
-            <label for="form__date-issue">Дата выдачи и кем выдан</label>
-            <input type="text" placeholder="Дата выдачи и кем выдан*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="input-box constructor__input col-md-5 mt-25">
-            <label for="form__code">Код Подразделения</label>
-            <input type="text" id="form_code" placeholder="Код Подразделения*">
-        </div>
-        <div class="input-box constructor__input col-md-7 mt-25">
-            <label for="form__address">Адрес Регистрации</label>
-            <input type="text"id="form__address" placeholder="Адрес Регистрации*">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="constructor__btn d-flex">
-                <button class="main-btn mx-auto mt-25" >Далее</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>`;
+`;
 
 window.personform = createPersonForm();
 window.compForm = createCompForm();
 window.enterpreneurForm = createEnterpreneurForm();
+

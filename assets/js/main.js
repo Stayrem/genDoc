@@ -450,6 +450,8 @@ $(function() {
                 opacity : 0
             }, 500, function() {
                 var $nextStep = $parentStep.next();
+                var $secondStepTitle = $('.second-step .constructor__subtitle');
+                $secondStepTitle.text('Заполните данные доверенного лица');
                 $parentStep.addClass('hidden');
                 $nextStep.removeClass('hidden');
                 $parentStep.removeClass('active');
@@ -462,6 +464,9 @@ $(function() {
         });
     }
     
+    $('#accordionExample').collapse({
+        toggle: false
+      })
     
 
     //===== Scroll It active
@@ -482,28 +487,30 @@ $(function() {
         if(place === undefined) {
             place = 'beforeend'
         }
-        contsiner.innerHTML = '';
         contsiner.insertAdjacentHTML(place, template);
       };
     
     var formTypeListener = function() {
-        var renderContainer = document.querySelector('.constructor__form');
-        var $formTypeSelect = $('#form__select');
+        var renderContainer = document.querySelector('.first-step');
+        var $formTypeSelect = $('.user-type #form__select');
         $formTypeSelect.change(function(evt){
             var formType = $(this).val();
             console.log(formType)
             switch(formType){
                 case 'form__person':
+                    renderContainer.innerHTML = '';
                     renderContent(renderContainer, window.personform);
                     $('select').niceSelect();
                     updateContructorEventListeners();
                     break;
                 case 'form__comp':
+                    renderContainer.innerHTML = '';
                     renderContent(renderContainer, window.compForm);
                     $('select').niceSelect();
                     updateContructorEventListeners();
                     break;
                 case 'form__enterpreneur':
+                    renderContainer.innerHTML = '';
                     renderContent(renderContainer, window.enterpreneurForm);
                     $('select').niceSelect();
                     updateContructorEventListeners();
@@ -513,6 +520,38 @@ $(function() {
             }
         })
     }();
+
+    var empoweredTypeListener = function () {
+        var renderContainer = document.querySelector('.second-step');
+        var $formTypeSelect = $('.empowered-type #form__select');
+        $formTypeSelect.change(function(evt){
+            var formType = $(this).val();
+            console.log(formType)
+            switch(formType){
+                case 'form__person':
+                    renderContainer.innerHTML = '';
+                    renderContent(renderContainer, window.personform);
+                    $('select').niceSelect();
+                    updateContructorEventListeners();
+                    break;
+                case 'form__comp':
+                    renderContainer.innerHTML = '';
+                    renderContent(renderContainer, window.compForm);
+                    $('select').niceSelect();
+                    updateContructorEventListeners();
+                    break;
+                case 'form__enterpreneur':
+                    renderContainer.innerHTML = '';
+                    renderContent(renderContainer, window.enterpreneurForm);
+                    $('select').niceSelect();
+                    updateContructorEventListeners();
+                    break;
+                default:
+                    break;
+            }
+        })
+
+    }()
     
 });
 

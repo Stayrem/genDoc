@@ -49,3 +49,48 @@
     border-color: #0c59db;
     color: #0c59db;
 }
+
+.types-choose .user-type{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.types-choose .empowered-type{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.types-choose .empowered-type::before{
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    background-image: url(../images/left.svg);
+}
+.types-choose .nice-select{
+    width: 100%;
+}
+
+.swap{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+}
+
+.swap img{
+    max-height: 42px;
+}
+
+.types-choose__title{
+    color: #333333;
+}
+
+.constructor__subtitle--mini{
+    font-size: 20px;
+}
+
+.second-step .doc-data{
+    display: none;
+}
